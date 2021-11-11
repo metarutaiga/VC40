@@ -1,0 +1,72 @@
+                          C/C++ COMPILER OPTIONS
+
+                              -OPTIMIZATION-
+
+/O1 minimize space (/Osgyb1 /Gfsy)       /Op[-] improve floating-pt consistency
+/O2 maximize speed (/Ox /Gfsy)           /Os favor code space
+/Oa assume no aliasing                   /Ot favor code speed *
+/Ob<n> inline expansion (Ob0 *)          /Ow assume cross-function aliasing
+/Od disable optimizations *              /Ox maximum opts (/Ogityb1 /Gs)
+/Og enable global optimization           /Oy[-] enable frame pointer omission
+/Oi enable intrinsic functions
+
+                             -CODE GENERATION-
+
+/AC compact model (near code, far data)  /Gs disable stack overflow checking *
+/AL large model (far code, far data)     /Gt[n] data objects >= n bytes are far
+/AM medium model (far code, near data)   /GR[-] enable C++ RTTI
+/AS small model (near code, near data) * /GX[-] enable C++ exception handling
+/Gc __pascal calling convention          /Gy separate functions for linker
+/Gd __cdecl calling convention *         /Gz __stdcall calling convention
+/Ge enable stack overflow checking       /Q68020 generate 68020 instructions *
+/Gf enable string pooling                /Q68030 generate 68030 instructions
+/GF enable read-only string pooling      /Q68040 generate 68040 instructions
+/Gh enable profiler hooks                /Q68s generate swap prologue/epilogue
+/Gr __fastcall calling convention
+
+                              -OUTPUT FILES-
+
+/Fa[file] name assembly listing file     /Fo<file> name object file
+/FA[sc] configure assembly listing       /Fp<file> name precompiled header file
+/Fd[file] name .PDB file                 /Fr[file] name source browser file
+/Fe<file> name .EXE file                 /FR[file] name extended .SBR file
+/Fm[file] name map file
+
+                              -PREPROCESSOR-
+
+/C don't strip comments                  /I<dir> add to include search path
+/D<name>{=|#}<text> define macro         /P preprocess to file
+/E preprocess to stdout                  /U<name> remove predefined macro
+/EP preprocess to stdout, no #line       /u remove all predefined macros
+/FI<file> name forced include file       /X ignore "standard places"
+
+                                -LANGUAGE-
+
+/Q68b order bitfields low to high        /Zd include line number information
+/Q68m include MacsBug symbols            /Ze enable Microsoft extensions *
+/Q68MPW[-] extensions to read MPW files  /Zg generate function prototypes
+/vd{0|1} disable/enable vtordisp         /Zi generate debugging information
+/vm<x> type of pointers to members       /Zl omit default library name
+/Z7 generate old-style debug info        /Zp[n] pack structs on n-bytes (Zp2 *)
+/Za disable extensions (implies /Op)     /Zs syntax check only
+
+                              -MISCELLANEOUS-
+
+/?, /help print this help message        /V<string> set version string
+/c compile only, no link                 /w disable all warnings
+/H<num> max external name length         /W<n> set warning level (default n=1)
+/J default char type is unsigned         /WX treat warnings as errors
+/nologo suppress copyright message       /Yc[file] create .PCH file
+/ND<segment> name the data segment       /Yd put debug info in every .OBJ
+/NT<segment> name the code segment       /Yu[file] use .PCH file
+/Tc<source file> compile file as .C      /YX[file] automatic .PCH
+/Tp<source file> compile file as .CPP    /Zn turn off SBRPACK for .SBR files
+
+                                 -LINKING-
+
+/link [linker options and libraries]
+
+                                    ---
+
+* default switches
+MPW is a trademark of Apple Computer, Inc.
